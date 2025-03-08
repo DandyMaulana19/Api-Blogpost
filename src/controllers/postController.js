@@ -106,9 +106,41 @@ const updatePost = async (req, res) => {
 
     return res.status(500).json({
       success: false,
-      message: "Error updateing posts",
+      message: "Error updating posts",
       statuscode: 500,
       data: null,
+    });
+  }
+};
+
+const deletePost = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const post = await prisma.post.findFirst({
+      where: {
+        id: Number.parseInt(id),
+      },
+    });
+
+    await prisma.post.delete({
+      where: {
+        id: Number.parseInt(id),
+      },
+    });
+
+    return res.json({
+      success: true,
+      message: "Post deleted successfully",
+      statuscode: 200,
+    });
+  } catch (error) {
+    console.log(error);
+
+    return res.json({
+      success: false,
+      message: "Error deleting post",
+      statuscode: 500,
     });
   }
 };
@@ -117,4 +149,5 @@ module.exports = {
   getPosts,
   createPost,
   updatePost,
+  deletePost,
 };
