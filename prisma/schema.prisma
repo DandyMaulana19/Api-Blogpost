@@ -14,11 +14,11 @@ datasource db {
 }
 
 model Post {
-  id  Int @id @default(autoincrement())
-  
-  title String @db.VarChar(255)
-  author_name String @db.VarChar(255) 
-  content String @db.Text
+  id Int @id @default(autoincrement())
+
+  title       String @db.VarChar(255)
+  author_name String @db.VarChar(255)
+  content     String @db.Text
 
   published Boolean @default(false)
 

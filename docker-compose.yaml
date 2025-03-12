@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres
+    env_file:
+      - .env.production
+    ports:
+      - "5432:5432"
+  app:
+    image: api-blogpost
+    ports:
+      - "3100:3100"
+    env_file:
+      - .env.production

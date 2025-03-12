@@ -12,7 +12,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "generate:prod": "PRISMA_CONFIG_PATH=.env.production npx prisma generate",
+    "migrate:prod": "PRISMA_CONFIG_PATH=.env.production npx prisma migrate",
+    "start:prod": "PRISMA_CONFIG_PATH=.env.production npm run start"
   },
   "author": "",
   "license": "ISC",
