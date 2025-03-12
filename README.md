@@ -71,24 +71,3 @@ Tambahkan server baru dengan:
 | `POST` | `/posts` | Membuat post baru |
 | `PUT` | `/posts/:id` | Update post |
 | `DELETE` | `/posts/:id` | Hapus post |
-
----
-
-## 🎯 Todo List
-- [ ] Menambahkan fitur komentar
-- [ ] Menambahkan pagination pada daftar post
-- [ ] Menambahkan caching dengan Redis
-
----
-
-## 🤝 Kontribusi
-Jika ingin berkontribusi, silakan fork repository ini dan buat pull request!
-
----
-
-## 📄 Lisensi
-MIT License - Silakan gunakan dan modifikasi sesuai kebutuhan.
-
----
-
-**Dibuat oleh [Dandy Maulana](https://github.com/DandyMaulana19)** 🚀  
